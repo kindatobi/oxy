@@ -21,13 +21,15 @@ import {
   SunIcon,
   UserIcon,
 } from "@phosphor-icons/react";
+import { SidebarTrigger } from "./ui/sidebar";
 
 export default function Navbar() {
   const { setTheme } = useTheme();
+
   return (
     <nav className="flex p-4 items-center justify-between">
       {/* LEFT */}
-      collapse btn
+      <SidebarTrigger />
       {/* RIGHT */}
       <div className="flex items-center gap-4">
         <Link href="/">Dashboard</Link>
