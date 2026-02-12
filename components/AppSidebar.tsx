@@ -59,7 +59,7 @@ const items = [
 export default function AppSidebar() {
   return (
     <Sidebar>
-      <SidebarHeader className="border-b py-4">
+      <SidebarHeader className="py-4">
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton>
@@ -166,24 +166,27 @@ export default function AppSidebar() {
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
-                <SidebarMenuButton>
-                  <Link href="#" />
-                  <TreeViewIcon />
-                  See All Workspace
+                <SidebarMenuButton asChild>
+                  <Link href="#">
+                    <TreeViewIcon />
+                    See All Workspace
+                  </Link>
                 </SidebarMenuButton>
                 <SidebarMenuSub>
                   <SidebarMenuSubItem>
-                    <SidebarMenuSubButton>
-                      <Link href="#"></Link>
-                      <PlusIcon />
-                      Create workspace
+                    <SidebarMenuSubButton asChild>
+                      <Link href="#">
+                        <PlusIcon />
+                        Create workspace
+                      </Link>
                     </SidebarMenuSubButton>
                   </SidebarMenuSubItem>
                   <SidebarMenuSubItem>
-                    <SidebarMenuSubButton>
-                      <Link href="#"></Link>
-                      <BookmarkIcon />
-                      Recent workspace
+                    <SidebarMenuSubButton asChild>
+                      <Link href="#">
+                        <BookmarkIcon />
+                        Recent workspace
+                      </Link>
                     </SidebarMenuSubButton>
                   </SidebarMenuSubItem>
                 </SidebarMenuSub>
