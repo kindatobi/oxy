@@ -32,9 +32,9 @@ const chartConfig = {
 
 export default function AppAreachart() {
   return (
-    <div>
+    <div className="flex flex-col h-full">
       <h1 className="text-lg font-medium mb-6">Total Visitors</h1>
-      <ChartContainer config={chartConfig} className="min-h-50 w-full">
+      <ChartContainer config={chartConfig} className="min-h-50 flex-1 w-full">
         <AreaChart accessibilityLayer data={chartData}>
           <CartesianGrid vertical={false} />
           <XAxis
