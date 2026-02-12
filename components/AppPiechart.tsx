@@ -7,11 +7,12 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "./ui/chart";
+import { TrendUpIcon } from "@phosphor-icons/react";
 
 const chartData = [
   { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-  { browser: "firefox", visitors: 287, fill: "var(--color-firefox)" },
+  { browser: "safari", visitors: 100, fill: "var(--color-safari)" },
+  { browser: "firefox", visitors: 847, fill: "var(--color-firefox)" },
   { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
   { browser: "other", visitors: 190, fill: "var(--color-other)" },
 ];
@@ -60,7 +61,7 @@ export default function AppPiechart() {
             data={chartData}
             dataKey="visitors"
             nameKey="browser"
-            innerRadius={60}
+            innerRadius={70}
             strokeWidth={5}
           >
             <Label
@@ -95,6 +96,15 @@ export default function AppPiechart() {
           </Pie>
         </PieChart>
       </ChartContainer>
+      <div className="mt-4 flex flex-col gap-2 items-center">
+        <div className="flex items-center gap-2 leading-none font-medium">
+          Trending up by 5.2% this month{" "}
+          <TrendUpIcon className="h-4 w-4 text-green-400" />
+        </div>
+        <div className="text-muted-foreground leading-none">
+          Showing total visitors for the last 6 months
+        </div>
+      </div>
     </div>
   );
 }
