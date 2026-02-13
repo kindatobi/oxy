@@ -2,7 +2,6 @@
 
 import {
   HouseIcon,
-  EnvelopeIcon,
   CalendarIcon,
   MagnifyingGlassIcon,
   UserIcon,
@@ -15,6 +14,7 @@ import {
   FilmSlateIcon,
   BrowsersIcon,
   ArchiveIcon,
+  UsersIcon,
 } from "@phosphor-icons/react";
 import {
   Sidebar,
@@ -50,8 +50,8 @@ import {
 } from "./ui/collapsible";
 
 const items = [
-  { title: "Home", url: "/", icon: HouseIcon },
-  { title: "Inbox", url: "#", icon: EnvelopeIcon },
+  { title: "Overview", url: "/", icon: HouseIcon },
+  { title: "Users", url: "/users", icon: UsersIcon },
   { title: "Calendar", url: "#", icon: CalendarIcon },
   { title: "Search", url: "#", icon: MagnifyingGlassIcon },
   { title: "Settings", url: "#", icon: GearIcon },
@@ -84,13 +84,11 @@ export default function AppSidebar() {
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton>
-                    <Link href={item.url} />
-                    <item.icon />
-                    <span>{item.title}</span>
-                    {item.title === "Inbox" && (
-                      <SidebarMenuBadge>17</SidebarMenuBadge>
-                    )}
+                  <SidebarMenuButton asChild>
+                    <Link href={item.url}>
+                      <item.icon />
+                      <span>{item.title}</span>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
