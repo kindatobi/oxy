@@ -15,6 +15,7 @@ import {
   BrowsersIcon,
   ArchiveIcon,
   UsersIcon,
+  CreditCardIcon,
 } from "@phosphor-icons/react";
 import {
   Sidebar,
@@ -52,6 +53,7 @@ import {
 const items = [
   { title: "Overview", url: "/", icon: HouseIcon },
   { title: "Users", url: "/users", icon: UsersIcon },
+  { title: "Payments", url: "/payments", icon: CreditCardIcon },
   { title: "Calendar", url: "#", icon: CalendarIcon },
   { title: "Search", url: "#", icon: MagnifyingGlassIcon },
   { title: "Settings", url: "#", icon: GearIcon },
